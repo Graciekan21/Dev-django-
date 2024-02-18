@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponse
 # Create your views here.
-if request.method == "POST":
-        return HttpResponse("You must have POSTed something")
-else:
-        return HttpResponse(request.method)
 def about_me(request):
     return HttpResponse("This would be the about page")
+
+    return HttpResponse("Hello, world!") 
 def index(request):
-    return HttpResponse("Hello, world!")
+if request.method == "POST":
+    return HttpResponse("You must have POSTed something")
+else:
+    return HttpResponse(request.method)
+ 
