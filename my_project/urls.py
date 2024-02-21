@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from hello_world import views as index_views
 from hello_world import views as about_views
+from blog.views import my_blog
 # from about import views as about_views
 
 urlpatterns = [
     path('', index_views.index, name='index'),
     path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
+    path('blog/', my_blog, name='blog'),
 ]
