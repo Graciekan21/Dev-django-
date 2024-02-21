@@ -13,6 +13,5 @@ def index(request):
     else:
         return HttpResponse(request.method)
 
-def my_blog(request):
-        return HttpResponse("Hello, Blog!")
+
  
